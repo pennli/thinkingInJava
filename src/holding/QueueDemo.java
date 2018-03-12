@@ -5,7 +5,9 @@ import java.util.*;
 
 public class QueueDemo {
   public static void printQ(Queue queue) {
+      //peek()--Retrieves, but does not remove, the head of this queue
     while(queue.peek() != null)
+     //remove()--Retrieves and removes the head of this queue
       System.out.print(queue.remove() + " ");
     System.out.println();
   }
@@ -13,6 +15,7 @@ public class QueueDemo {
     Queue<Integer> queue = new LinkedList<Integer>();
     Random rand = new Random(47);
     for(int i = 0; i < 10; i++)
+      //offer()--in queue
       queue.offer(rand.nextInt(i + 10));
     printQ(queue);
     Queue<Character> qc = new LinkedList<Character>();
