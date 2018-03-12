@@ -9,12 +9,15 @@ public class PriorityQueueDemo {
     Random rand = new Random(47);
     for(int i = 0; i < 10; i++)
       priorityQueue.offer(rand.nextInt(i + 10));
+    //ascend order default, permit duplicate
     QueueDemo.printQ(priorityQueue);
 
     List<Integer> ints = Arrays.asList(25, 22, 20,
       18, 14, 9, 3, 1, 1, 2, 3, 9, 14, 18, 21, 23, 25);
+    //ascend order default, permit duplicate
     priorityQueue = new PriorityQueue<Integer>(ints);
     QueueDemo.printQ(priorityQueue);
+    //descend order default, permit duplicate
     priorityQueue = new PriorityQueue<Integer>(
         ints.size(), Collections.reverseOrder());
     priorityQueue.addAll(ints);
@@ -22,9 +25,11 @@ public class PriorityQueueDemo {
 
     String fact = "EDUCATION SHOULD ESCHEW OBFUSCATION";
     List<String> strings = Arrays.asList(fact.split(""));
+    //ascend order default, permit duplicate
     PriorityQueue<String> stringPQ =
       new PriorityQueue<String>(strings);
     QueueDemo.printQ(stringPQ);
+    //descend order default, permit duplicate
     stringPQ = new PriorityQueue<String>(
       strings.size(), Collections.reverseOrder());
     stringPQ.addAll(strings);
@@ -33,6 +38,7 @@ public class PriorityQueueDemo {
     Set<Character> charSet = new HashSet<Character>();
     for(char c : fact.toCharArray())
       charSet.add(c); // Autoboxing
+      //ascend order default, without duplicate
     PriorityQueue<Character> characterPQ =
       new PriorityQueue<Character>(charSet);
     QueueDemo.printQ(characterPQ);

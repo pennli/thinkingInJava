@@ -12,6 +12,7 @@ public class QueueDemo {
     System.out.println();
   }
   public static void main(String[] args) {
+      //Upcasting to a Queue from a LinkedList
     Queue<Integer> queue = new LinkedList<Integer>();
     Random rand = new Random(47);
     for(int i = 0; i < 10; i++)
